@@ -4,3 +4,97 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+ :root.theme-dark {
+    /* Переменные тёмной темы */
+    --font-basic: 'Inter';
+    --font-basic-weight-header: 785;
+    --font-basic-weight-text: 465;
+    --font-additional: 'PressStart2P';
+    --background-color: #000;
+    --theme-mainColor: #00CC14;
+    --button-textColor: #00CC14;
+    --heart-fill: red;
+    --background-image-1: repeating-linear-gradient(90deg,#000 0px,#000 2px,rgb(0 0 0 / 0) 2px,rgb(0 0 0 / 0) 4px);
+    --background-image-2: repeating-linear-gradient(0deg,#007f0c 0px,#007f0c 2px,#004306 2px,#004306 4px);
+    --header-block-min: 375px;
+    --header-block-mid: calc(100% * 696 / (696 + 372 * 2));
+    --header-block-max: 696px;
+  }
+  
+  .page.theme-dark {
+    /* сохраните этот селектор в приведённом виде.
+      Так стили написанные ниже будут иметь больший вес,
+      чем стили в медиазапросе предпочтений пользователя
+    */
+    /* Переменные тёмной темы */
+    --font-basic: 'Inter';
+    --font-basic-weight-header: 785;
+    --font-basic-weight-text: 465;
+    --font-additional: 'PressStart2P';
+    --background-color: #000;
+    --theme-mainColor: #00CC14;
+    --button-textColor: #00CC14;
+    --heart-fill: red;
+    --background-image-1: repeating-linear-gradient(90deg,#000 0px,#000 2px,rgb(0 0 0 / 0) 2px,rgb(0 0 0 / 0) 4px);
+    --background-image-2: repeating-linear-gradient(0deg,#007f0c 0px,#007f0c 2px,#004306 2px,#004306 4px);
+    --header-block-min: 375px;
+    --header-block-mid: calc(100% * 696 / (696 + 372 * 2));
+    --header-block-max: 696px;
+  }
+
+  :root.theme-light {
+    /* Переменные светлой темы */
+    --font-basic: 'Inter';
+    --font-basic-weight-header: 700;
+    --font-basic-weight-text: 400;
+    --font-additional: 'PressStart2P';
+    --background-color: #FFF;
+    --theme-mainColor: #000;
+    --button-textColor: #FFF;
+    --heart-fill: red;
+    --background-image-1: repeating-linear-gradient(90deg,#d3d3d3 0px,#d3d3d3 2px, rgb(211 211 211 / 0) 2px,rgb(211 211 211/0) 4px);
+    --background-image-2: repeating-linear-gradient(0deg,#e7e7e7 0px,#e7e7e7 2px,#1a1a1a 2px,#1a1a1a 4px);
+    --header-block-min: 375px;
+    --header-block-mid: calc(100% * 696 / (696 + 372 * 2));
+    --header-block-max: 696px;
+  }
+
+  .page.theme-light {
+    /* сохраните этот селектор в приведённом виде.
+      Так стили написанные ниже будут иметь больший вес,
+      чем стили в медиазапросе предпочтений пользователя
+    */
+    /* Переменные светлой темы */
+    --font-basic: 'Inter';
+    --font-basic-weight-header: 700;
+    --font-basic-weight-text: 400;
+    --font-additional: 'PressStart2P';
+    --background-color: #FFF;
+    --theme-mainColor: #000;
+    --button-textColor: #FFF;
+    --heart-fill: red;
+    --background-image-1: repeating-linear-gradient(90deg,#d3d3d3 0px,#d3d3d3 2px, rgb(211 211 211 / 0) 2px,rgb(211 211 211/0) 4px);
+    --background-image-2: repeating-linear-gradient(0deg,#e7e7e7 0px,#e7e7e7 2px,#1a1a1a 2px,#1a1a1a 4px);
+    --header-block-min: 375px;
+    --header-block-mid: calc(100% * 696 / (696 + 372 * 2));
+    --header-block-max: 696px;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+  :root {
+    /* Переменные тёмной темы */
+    --font-basic: 'Inter';
+    --font-basic-weight-header: 785;
+    --font-basic-weight-text: 465;
+    --font-additional: 'PressStart2P';
+    --background-color: #000;
+    --theme-mainColor: #00CC14;
+    --button-textColor: #00CC14;
+    --heart-fill: red;
+    --background-image-1: repeating-linear-gradient(90deg,#000 0px,#000 2px,rgb(0 0 0 / 0) 2px,rgb(0 0 0 / 0) 4px);
+    --background-image-2: repeating-linear-gradient(0deg,#007f0c 0px,#007f0c 2px,#004306 2px,#004306 4px);
+    --header-block-min: 375px;
+    --header-block-mid: calc(100% * 696 / (696 + 372 * 2));
+    --header-block-max: 696px;
+    }
+  }

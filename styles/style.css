@@ -17,7 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-basic), Arial, sans-serif;
+  font-family: var(--font-basic), Arial, fantasy;
   font-variation-settings: 'wght' var(--font-basic-weight-text);
   color: var(--theme-mainColor);
   background-color: var(--background-color);
@@ -51,7 +51,7 @@
 
   .footer__button {
     flex-direction: column;
-    width: 306px;
+    inline-size: 306px;
     height: 80px;
   }
 
@@ -69,7 +69,6 @@
 
   .popup {
     width: 341px;
-    height: 195px;
   }
 
   .popup-button {
@@ -102,7 +101,7 @@
 
   .footer__button {
     flex-direction: row;
-    width: 335px;
+    inline-size: 335px;
     height: 51px;
   }
 
@@ -120,7 +119,6 @@
 
   .popup {
     width: 357px;
-    height: 193px;
   }
 
   .popup-button {
@@ -142,28 +140,28 @@
 }
 
 .header__title {
+  display: block;
   color: var(--theme-mainColor);
-  font-family: "Press Start 2P";
+  font-family: var(--font-additional), Arial, sans-serif;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-basic-weight-text);
   line-height: normal;
   text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  border: none;
 }
 
 .header__text {
   color: var(--theme-mainColor);
-  font-family: "Press Start 2P";
+  font-family: var(--font-additional), Arial, sans-serif;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-basic-weight-text);
   line-height: normal;
   text-transform: uppercase;
   margin-block-start: 20px;
-}
-
-.letter__accent {
-  text-transform: lowercase;
 }
 
 .theme-menu__list {
@@ -250,13 +248,13 @@
   width: 14px;
   height: 14px;
   top: 3px;
-  font-family: "Press Start 2P";
+  font-family: var(--font-additional), Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-basic-weight-text);
   line-height: normal;
   text-transform: uppercase;
-  animation: arrow 0.5s infinite ease-in-out;
+  animation: arrow 0.5s infinite alternate ease-in-out;
 }
 
 @keyframes arrow {
@@ -288,10 +286,10 @@
   margin-block-start: 5px;
   margin-block-end: 5px;
   color: var(--theme-mainColor);
-  font-family: Inter;
+  font-family: var(--font-basic);
   font-size: 18px;
   font-style: normal;
-  font-weight: 785;
+  font-variation-settings: 'wght' var(--font-basic-weight-header);
   line-height: normal;
 }
 
@@ -303,48 +301,52 @@
   border-bottom: 2px solid var(--theme-mainColor);
 }
 
-.filter-2 {
+.filter-bright {
   filter: brightness(200%);
 }
 
-.filter-3 {
+.filter-contrast {
   filter: contrast(50%);
 }
 
-.filter-4 {
+.filter-blur {
   filter: blur(0.5rem);
 }
 
-.filter-5 {
+.filter-invert {
   filter: invert(80%);
 }
 
-.filter-6 {
+.filter-grayscale {
   filter: grayscale(0.8);
 }
 
-.filter-7 {
+.filter-opacity {
   filter: opacity(0.7);
 }
 
-.filter-8 {
+.filter-saturate {
   filter: saturate(150%);
 }
 
 .picture__text {
   position: absolute;
+  z-index: 1;
   right: 25px;
   top: 25px;
   color: var(--theme-mainColor);
-  font-family: "Press Start 2P";
+  font-family: var(--font-additional), Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-basic-weight-text);
   line-height: normal;
-  text-transform: uppercase;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color), 1px 0 var(--background-color), 0 -1px var(--background-color);
+}
+
+.picture__text-uppercase {
+  text-transform: uppercase;
 }
 
 @supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
@@ -369,22 +371,10 @@
   margin-inline-end: 25px;
   margin-block-start: 25px;
   color: var(--theme-mainColor);
-  font-family: Inter;
+  font-family: var(--font-basic);
   font-size: 18px;
   font-style: normal;
-  font-weight: 465;
-  line-height: 21px;
-}
-
-.section__for-user {
-  margin-inline-start: 25px;
-  margin-inline-end: 25px;
-  margin-block-start: 27px;
-  color: var(--theme-mainColor);
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 465;
+  font-weight: var(--font-basic-weight-text);
   line-height: 21px;
 }
 
@@ -400,6 +390,8 @@
   padding: 0;
 }
 
+/* блок стилей для сердца и кнопки like */
+/*
 .heart__button {
   background-color: var(--background-color);
   cursor: pointer;
@@ -423,9 +415,9 @@
   width: 39px;
   height: 36px;
 }
-
+*/
 /* состояния после наведения и активации */
-
+/*
 .heart__button .like-icon .heart .core {
   fill: var(--background-color);
   transition: fill 0.3s 0.03s;
@@ -455,9 +447,9 @@
   fill: var(--heart-fill);
   transition: fill 0.3s 0.05s;
 }
-
+*/
 /* состояние после like */
-
+/*
 .heart__button .like-icon .heart .contour {
   fill: var(--theme-mainColor);
 }
@@ -509,9 +501,9 @@
     opacity: 1;
   }
 }
-
+*/
 /* end of heart animation */
-
+/*
 .text__button {
   position: relative;
   font-family: "Press Start 2P";
@@ -584,6 +576,8 @@
   color: var(--button-textColor);
   mix-blend-mode: difference;
 }
+*/
+/* окончание стилизации блока с like */
 
 .footer {
   background-color: var(--background-color);
@@ -623,18 +617,16 @@
 }
 
 .footer__button__img {
-  position: absolute;
   z-index: 1;
   fill: var(--button-textColor);
   mix-blend-mode: difference;
 }
 
 .footer__button__text {
-  position: absolute;
-  font-family: "Press Start 2P";
+  font-family: var(--font-additional), Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-basic-weight-text);
   line-height: 90%;
   z-index: 1;
   color: var(--button-textColor);
@@ -675,10 +667,10 @@ dialog::backdrop {
 }
 
 .popup-text {
-  font-family: "Press Start 2P";
+  font-family: var(--font-additional), Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-basic-weight-text);
   line-height: 150%;
   text-transform: uppercase;
   color: var(--theme-mainColor);
@@ -686,10 +678,11 @@ dialog::backdrop {
 }
 
 .popup-button {
-  font-family: "Press Start 2P";
+  /* про кнопку на модальном окне в задании ничего нет про поведение */
+  font-family: var(--font-additional), Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-basic-weight-text);
   line-height: 90%;
   text-transform: uppercase;
   color: var(--theme-mainColor);

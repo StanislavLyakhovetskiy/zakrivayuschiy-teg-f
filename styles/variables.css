@@ -9,9 +9,9 @@
     --theme-mainColor: #000;
     --button-textColor: #FFF;
     --heart-fill: red;
-    --background-image-1: repeating-linear-gradient(90deg,#d3d3d3 0px,#d3d3d3 2px, rgb(211 211 211 / 0) 2px,rgb(211 211 211 / 0) 4px);
-    --background-image-2: repeating-linear-gradient(0deg,#e7e7e7 0px,#e7e7e7 2px,#1a1a1a 2px,#1a1a1a 4px);
-    --header-block-width: calc(100% * 696 / (696 + 372 * 2));
+    --background-image-horizontal: repeating-linear-gradient(90deg,#d3d3d3 0px,#d3d3d3 2px, rgb(211 211 211 / 0) 2px,rgb(211 211 211 / 0) 4px);
+    --background-image-vertical: repeating-linear-gradient(0deg,#e7e7e7 0px,#e7e7e7 2px,#1a1a1a 2px,#1a1a1a 4px);
+    --background-image-general: linear-gradient(0deg,rgb(26,26,26,1), rgb(231,231,231,1));
     --header-block-min: 375px;
     --header-block-mid: calc(100% * 696 / (696 + 372 * 2));
     --header-block-max: 696px;

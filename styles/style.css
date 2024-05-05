@@ -17,12 +17,12 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-basic), Arial, fantasy;
+  font-family: var(--font-basic), Arial, sans-serif;
   font-variation-settings: 'wght' var(--font-basic-weight-text);
   color: var(--theme-mainColor);
   background-color: var(--background-color);
   background-size: cover;
-  background-image: var(--background-image-1), var(--background-image-2);
+  background-image: var(--background-image-horizontal), var(--background-image-vertical), var(--background-image-general);
   background-position: center;
   background-attachment: fixed;
   display: flex;
@@ -37,8 +37,12 @@
     width: 100%;
   }
 
-  .header__title {
+  .logo__title {
     margin-block-start: 120px;
+  }
+
+  .theme-menu__list {
+    margin-inline-start: 154px;
   }
 
   .card {
@@ -46,7 +50,29 @@
   }
 
   .main {
-    gap: 50px;
+    gap: 51px;
+  }
+
+  .section__title {
+    margin-inline-start: 10px;
+  }
+
+  .picture__text {
+    right: 14px;
+    top: 21px;
+  }
+
+  .section__text {
+    margin-inline-start: 25px;
+    margin-inline-end: 28px;
+    margin-block-start: 23px;
+    margin-block-end: 4px;
+  }
+
+  .main-section__button {
+    margin-block-start: 21px;
+    margin-block-end: 25px;
+    margin-inline-end: 25px;
   }
 
   .footer__button {
@@ -58,8 +84,6 @@
   .footer__button__img {
     width: 28px;
     height: 28px;
-    top: 15px;
-    left: 138px;
   }
   
   .footer__button__text {
@@ -87,8 +111,12 @@
     width: clamp(var(--header-block-min), var(--header-block-mid), var(--header-block-max));
   }
 
-  .header__title {
+  .logo__title {
     margin-block-start: 136px;
+  }
+
+  .theme-menu__list {
+    margin-inline-start: 314px;
   }
 
   .card {
@@ -96,7 +124,28 @@
   }
 
   .main {
-    gap: 57px;
+    gap: 49px;
+  }
+
+  .section__title {
+    margin-inline-start: 8px;
+  }
+
+  .picture__text {
+    right: 25px;
+    top: 25px;
+  }
+
+  .section__text {
+    margin-inline-start: 23px;
+    margin-inline-end: 23px;
+    margin-block-start: 28px;
+  }
+
+  .main-section__button {
+    margin-block-start: 25px;
+    margin-block-end: 25px;
+    margin-inline-end: 23px;
   }
 
   .footer__button {
@@ -108,8 +157,6 @@
   .footer__button__img {
     width: 21px;
     height: 21px;
-    top: 13px;
-    left: 21px;
   }
   
   .footer__button__text {
@@ -136,13 +183,13 @@
   text-align: center;
   border: 2px solid var(--theme-mainColor);
   background-color: var(--background-color);
-  margin-block-start: 102px;
+  margin-block-start: 101px;
 }
 
-.header__title {
+.logo__title {
   display: block;
   color: var(--theme-mainColor);
-  font-family: var(--font-additional), Arial, sans-serif;
+  font-family: var(--font-additional), Arial, fantasy;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   font-style: normal;
   font-weight: var(--font-basic-weight-text);
@@ -155,21 +202,28 @@
 
 .header__text {
   color: var(--theme-mainColor);
-  font-family: var(--font-additional), Arial, sans-serif;
+  font-family: var(--font-additional), Arial, fantasy;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   font-style: normal;
   font-weight: var(--font-basic-weight-text);
   line-height: normal;
   text-transform: uppercase;
-  margin-block-start: 20px;
+  margin-block-start: 19px;
 }
 
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  align-items: flex-start;
+  gap: 11px;
   margin-block-start: 25px;
   margin-block-end: 25px;
+  font-family: var(--font-additional), Arial, fantasy;
+  font-weight: var(--font-basic-weight-text);
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .theme-menu__button {
@@ -179,6 +233,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  font-family: var(--font-additional), Arial, fantasy;
 }
 
 .theme-menu__button:hover {
@@ -211,44 +266,11 @@
   animation: decorline__in 0.3s ease forwards;
 }
 
-@keyframes opacity {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.6;
-  }
-}
-
-@keyframes decorline__out {
-  from {
-    width: 100%;
-    right: 0%;
-  }
-  to {
-    width: 0%;
-    left: 0%;
-  }
-}
-
-@keyframes decorline__in {
-  from {
-    width: 0%;
-    left: 0%;
-  }
-  to {
-    width: 100%;
-    right: 0%;
-  }
-}
-
 .theme-menu__button:disabled::before {
   content: '▶';
   position: absolute;
   width: 14px;
   height: 14px;
-  top: 3px;
-  font-family: var(--font-additional), Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--font-basic-weight-text);
@@ -257,17 +279,8 @@
   animation: arrow 0.5s infinite alternate ease-in-out;
 }
 
-@keyframes arrow {
-  from {
-    left: -18px;
-  }
-  to {
-    left: -22px;
-  }
-}
-
 .main {
-  margin-block-start: 104px;
+  margin-block-start: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -281,7 +294,6 @@
 }
 
 .section__title {
-  margin-inline-start: 10px;
   margin-inline-end: 10px;
   margin-block-start: 5px;
   margin-block-end: 5px;
@@ -332,10 +344,8 @@
 .picture__text {
   position: absolute;
   z-index: 1;
-  right: 25px;
-  top: 25px;
   color: var(--theme-mainColor);
-  font-family: var(--font-additional), Arial, sans-serif;
+  font-family: var(--font-additional), Arial, fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--font-basic-weight-text);
@@ -367,9 +377,6 @@
 }
 
 .section__text {
-  margin-inline-start: 25px;
-  margin-inline-end: 25px;
-  margin-block-start: 25px;
   color: var(--theme-mainColor);
   font-family: var(--font-basic);
   font-size: 18px;
@@ -379,209 +386,17 @@
 }
 
 .main-section__button {
-  margin-block-start: 25px;
-  margin-block-end: 25px;
-  margin-inline-end: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   align-self: flex-end;
-  gap: 12px;
+  gap: 0px;
   padding: 0;
 }
 
-/* блок стилей для сердца и кнопки like */
-/*
-.heart__button {
-  background-color: var(--background-color);
-  cursor: pointer;
-  outline: none;
-  border: none;
-  height: 38px;
-  transition: border 0.3s ease, fill 3s;
-}
-
-.heart__button:focus {
-  outline: none;
-  border: none;
-}
-
-.heart__button:focus-visible {
-  outline: none;
-  border: 2px solid var(--theme-mainColor);
-}
-
-.heart-svg {
-  width: 39px;
-  height: 36px;
-}
-*/
-/* состояния после наведения и активации */
-/*
-.heart__button .like-icon .heart .core {
-  fill: var(--background-color);
-  transition: fill 0.3s 0.03s;
-}
-
-.heart__button:hover .like-icon .heart .core {
-  fill: var(--theme-mainColor);
-  transition: fill 0.3s;
-}
-
-.heart__button:active .like-icon .heart .core {
-  fill: var(--heart-fill);
-  transition: fill 0.3s;
-}
-
-.heart__button .like-icon .heart .main-body {
-  fill: var(--background-color);
-  transition: fill 0.3s;
-}
-
-.heart__button:hover .like-icon .heart .main-body {
-  fill: var(--theme-mainColor);
-  transition: fill 0.3s 0.05s;
-}
-
-.heart__button:active .like-icon .heart .main-body {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.05s;
-}
-*/
-/* состояние после like */
-/*
-.heart__button .like-icon .heart .contour {
-  fill: var(--theme-mainColor);
-}
-
-.heart__button .like-icon .sparks {
-  fill: var(--heart-fill);
-  opacity: 0;
-}
-
-.heart__button .like-icon.is-liked .heart .core {
-  fill: var(--heart-fill);
-  transition: fill 0.3s;
-}
-
-.heart__button .like-icon.is-liked .heart .main-body {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.05s;
-}
-
-.heart__button .like-icon.is-liked .heart .contour {
-  fill: var(--heart-fill);
-  transition: fill 0.3s 0.06s;
-}
-
-.heart__button .like-icon.is-liked .heart {
-  animation: scale 0.3s ease-in 0.1s backwards;
-}
-
-@keyframes scale {
-  from {
-    transform-origin: center;
-    transform: scale(1);
-  }
-  to {
-    transform-origin: center;
-    transform: scale(1.5);
-  }
-}
-
-.heart__button .like-icon.is-liked .sparks {
-  animation: sparks 0.3s ease-in 0.3s backwards;
-}
-
-@keyframes sparks {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-*/
-/* end of heart animation */
-/*
-.text__button {
-  position: relative;
-  font-family: "Press Start 2P";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 90%;
-  width: 130px;
-  height: 38px;
-  border: 2px solid var(--theme-mainColor);
-  background-color: var(--background-color);
-  cursor: pointer;
-  outline: none;
-  box-shadow: 0px 0px 0px 0px var(--theme-mainColor);
-  transition: box-shadow 0.3s;
-}
-
-.text__button:focus {
-  box-shadow: 2px 2px 0px 0px var(--theme-mainColor);
-}
-
-.text__button::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  background-color: var(--theme-mainColor);
-  animation: button__background__out 0.5s ease-in-out forwards;
-}
-
-.text__button:hover::before {
-  animation: button__background__in 0.5s ease-in-out forwards;
-}
-
-@keyframes button__background__in {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes button__background__out {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 0%;
-  }
-}
-
-.text__button__text-basic {
-  opacity: 0;
-}
-
-.text__button__text {
-  position: absolute;
-  font-family: "Press Start 2P";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 90%;
-  top: 11px;
-  left: 0px;
-  width: 130px;
-  height: 38px;
-  z-index: 1;
-  color: var(--button-textColor);
-  mix-blend-mode: difference;
-}
-*/
-/* окончание стилизации блока с like */
-
 .footer {
   background-color: var(--background-color);
-  margin-block-start: 54px;
+  margin-block-start: 2px;
   margin-block-end: 105px;
 }
 
@@ -617,18 +432,21 @@
 }
 
 .footer__button__img {
-  z-index: 1;
+  fill: var(--button-textColor);
+  mix-blend-mode: difference;
+}
+
+.floppy {
   fill: var(--button-textColor);
   mix-blend-mode: difference;
 }
 
 .footer__button__text {
-  font-family: var(--font-additional), Arial, sans-serif;
+  font-family: var(--font-additional), Arial, fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--font-basic-weight-text);
   line-height: 90%;
-  z-index: 1;
   color: var(--button-textColor);
   mix-blend-mode: difference;
 }
@@ -667,7 +485,7 @@ dialog::backdrop {
 }
 
 .popup-text {
-  font-family: var(--font-additional), Arial, sans-serif;
+  font-family: var(--font-additional), Arial, fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--font-basic-weight-text);
@@ -678,8 +496,7 @@ dialog::backdrop {
 }
 
 .popup-button {
-  /* про кнопку на модальном окне в задании ничего нет про поведение */
-  font-family: var(--font-additional), Arial, sans-serif;
+  font-family: var(--font-additional), Arial, fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--font-basic-weight-text);
@@ -692,5 +509,31 @@ dialog::backdrop {
   padding: 9px 17px;
   cursor: pointer;
   margin-block-end: 32px;
+  outline: none;
+  position: relative;
 }
 
+.popup-button-text {
+  text-transform: uppercase;
+  z-index: 1;
+  color: var(--button-textColor);
+  mix-blend-mode: difference;
+}
+
+.popup-button::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  background-color: var(--theme-mainColor);
+  animation: button__background__out 0.5s ease-in-out forwards;
+}
+
+.popup-button:hover::before {
+  animation: button__background__in 0.5s ease-in-out forwards;
+}
+
+.popup-button:focus {
+  box-shadow: 2px 2px 0px 0px var(--theme-mainColor);
+}

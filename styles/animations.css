@@ -30,8 +30,8 @@
   }
   
   .heart__button:focus-visible {
-    outline: none;
-    border: 2px solid var(--theme-mainColor);
+    border: none;
+    outline: 2px solid var(--theme-mainColor);
   }
   
   .heart-svg {
@@ -115,7 +115,7 @@
   }
   
   .heart__button .like-icon.is-liked .sparks {
-    animation: sparks 0.3s ease-in 0.3s backwards;
+    animation: sparks 0.3s ease-in 0.3s;
   }
   
   @keyframes sparks {
@@ -131,7 +131,7 @@
   
   .text__button {
     position: relative;
-    font-family: var(--font-additional), Arial, sans-serif;
+    font-family: var(--font-additional), Arial, fantasy;
     font-size: 14px;
     font-style: normal;
     font-weight: var(--font-basic-weight-text);
@@ -186,7 +186,7 @@
   }
   
   .text__button__text {
-    font-family: var(--font-additional), Arial, sans-serif;
+    font-family: var(--font-additional), Arial, fantasy;
     font-size: 14px;
     font-style: normal;
     font-weight: var(--font-basic-weight-text);
@@ -197,3 +197,43 @@
   }
   
   /* окончание стилизации блока с like */
+
+  @keyframes opacity {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.6;
+    }
+  }
+  
+  @keyframes decorline__out {
+    from {
+      width: 100%;
+      right: 0%;
+    }
+    to {
+      width: 0%;
+      left: 0%;
+    }
+  }
+  
+  @keyframes decorline__in {
+    from {
+      width: 0%;
+      left: 0%;
+    }
+    to {
+      width: 100%;
+      right: 0%;
+    }
+  }
+
+  @keyframes arrow {
+    from {
+      left: -18px;
+    }
+    to {
+      left: -22px;
+    }
+  }

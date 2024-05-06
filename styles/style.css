@@ -41,10 +41,6 @@
     margin-block-start: 120px;
   }
 
-  .theme-menu__list {
-    margin-inline-start: 154px;
-  }
-
   .card {
     width: 100%;
   }
@@ -85,11 +81,6 @@
     width: 28px;
     height: 28px;
   }
-  
-  .footer__button__text {
-    top: 51px;
-    left: 19.5px;
-  }
 
   .popup {
     width: 341px;
@@ -113,10 +104,6 @@
 
   .logo__title {
     margin-block-start: 136px;
-  }
-
-  .theme-menu__list {
-    margin-inline-start: 314px;
   }
 
   .card {
@@ -158,11 +145,6 @@
     width: 21px;
     height: 21px;
   }
-  
-  .footer__button__text {
-    top: 18.5px;
-    left: 50px;
-  }
 
   .popup {
     width: 357px;
@@ -180,6 +162,10 @@
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   border: 2px solid var(--theme-mainColor);
   background-color: var(--background-color);
@@ -209,6 +195,10 @@
   line-height: normal;
   text-transform: uppercase;
   margin-block-start: 19px;
+}
+
+.letter-uppercase {
+  text-transform: uppercase;
 }
 
 .theme-menu__list {
@@ -436,11 +426,6 @@
   mix-blend-mode: difference;
 }
 
-.floppy {
-  fill: var(--button-textColor);
-  mix-blend-mode: difference;
-}
-
 .footer__button__text {
   font-family: var(--font-additional), Arial, fantasy;
   font-size: 14px;
@@ -480,8 +465,9 @@ dialog::backdrop {
 
 .popup-floppy {
   fill: var(--theme-mainColor);
-  width: 39px;
-  height: 39px;
+  width: 21px;
+  height: 21px;
+  display: block;
 }
 
 .popup-text {

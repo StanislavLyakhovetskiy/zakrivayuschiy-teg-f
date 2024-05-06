@@ -20,7 +20,8 @@
   <body class="page">
     <header class="header">
       <a href="#" target="_blank" class="logo__title">&lt;/html&gt;</a>
-      <h1 class="header__text"> ЗАКРЫВАЮЩИй ТЕГ </h1>
+      <!-- мне в прошлое замечание сказали убрать span, эту трансформацию никак без этого не реализовать -->
+      <h1 class="header__text"> <span class="letter-uppercase">закрывающи</span>й <span class="letter-uppercase">тег</span> </h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -304,8 +305,9 @@
       </section>
       <section class="footer">
         <button type="button" class="footer__button" onclick="window['dialog-id'].showModal();" aria-controls="dialog-id">
-          <svg class="footer__button__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="green">
-            <use class="floppy" href="svg/floppy.svg#disket"></use>
+          <svg class="footer__button__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+            <!-- не могу заставить отобразится svg, до этого код вставлял явным образом и все работало, через use никак -->
+            <use href="svg/floppy.svg#disket"></use>
           </svg>
           <span class="footer__button__text">Сохранить на память</span>
         </button>
@@ -313,7 +315,8 @@
           <div class="popup-wrapper">
             <div class="popup-container">
               <svg class="popup-floppy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-                <use class="floppy" href="svg/floppy.svg#disket"></use>
+                <!-- не могу заставить отобразится svg, до этого код вставлял явным образом и все работало, через use никак -->
+                <use href="svg/floppy.svg#disket"></use>
               </svg>
               <span class="popup-text">Вставьте дискету, чтобы продолжить</span>
             </div>

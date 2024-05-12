@@ -100,7 +100,7 @@
   }
   
   .heart__button .like-icon.is-liked .heart {
-    animation: scale 0.3s ease-in 0.1s backwards;
+    animation: scale 0.3s ease-in 0.1s;
   }
   
   @keyframes scale {
@@ -156,11 +156,13 @@
     left: 0px;
     height: 100%;
     background-color: var(--theme-mainColor);
-    animation: button__background__out 0.5s ease-in-out forwards;
+    /*animation: button__background__out 0.5s ease-in-out forwards;*/
+    animation: button__background__out 0.5s ease-in-out;
   }
   
   .text__button:hover::before {
-    animation: button__background__in 0.5s ease-in-out forwards;
+    /*animation: button__background__in 0.5s ease-in-out forwards;*/
+    animation: button__background__in 0.5s ease-in-out;
   }
   
   @keyframes button__background__in {

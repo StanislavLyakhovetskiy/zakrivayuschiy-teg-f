@@ -82,7 +82,7 @@
     height: 80px;
   }
 
-  .footer__button__img {
+  .footer__disk {
     width: 28px;
     height: 28px;
   }
@@ -151,7 +151,7 @@
     height: 51px;
   }
 
-  .footer__button__img {
+  .footer__disk {
     width: 21px;
     height: 21px;
   }
@@ -427,14 +427,6 @@
   animation: button__background__in 0.5s ease-in-out forwards;
 }
 
-.footer__disk {
-  width: 21px;
-  height: 21px;
-  fill:darkorange;
-  stroke: #000;
-  border: 1px solid #ea42bc;
-}
-
 .footer__button__text {
   font-family: var(--font-additional), Arial, fantasy;
   font-size: 14px;
@@ -442,6 +434,11 @@
   font-weight: var(--font-basic-weight-text);
   line-height: 90%;
   color: var(--button-textColor);
+  mix-blend-mode: difference;
+}
+
+.footer__disk {
+  fill: var(--button-textColor);
   mix-blend-mode: difference;
 }
 
@@ -465,11 +462,16 @@ dialog::backdrop {
 }
 
 .popup-container {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 39px auto;
   justify-content: center;
   align-items: center;
   margin-block-start: 32px;
+}
+
+.popup-disk { 
+  fill: var(--button-textColor);
+  mix-blend-mode: difference;
 }
 
 .popup-text {
@@ -481,6 +483,7 @@ dialog::backdrop {
   text-transform: uppercase;
   color: var(--theme-mainColor);
   background-color: var(--background-color);
+  margin-inline-start: 20px;
 }
 
 .popup-button {
